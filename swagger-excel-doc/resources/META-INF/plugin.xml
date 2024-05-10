@@ -1,0 +1,55 @@
+<idea-plugin>
+  <id>com.qiuhuanhen.plugin.swagger.excel.doc</id>
+  <name>Swagger Excel Doc</name>
+  <version>0.0.1</version>
+  <vendor>qiuhuanhen</vendor>
+
+  <description><![CDATA[
+      Generate aswgger and easy excel Annotation plugin.<br>
+      根据属性的doc注释生成swagger/easy注解,运用场景为vo类、excel的导入导出类<br>
+
+      <ul>
+        <li>generate swagger or easy excel annotation by doc comment.</li>
+      </ul>
+
+    ]]></description>
+
+  <change-notes><![CDATA[
+    <ul>
+    <li>
+      <p>支持swagger注解,支持easyExcel实体类注解</p>
+      <p>Support for swagger and easy excel</p>
+    </li>
+    </ul>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0" until-build="223.*"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.java</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="com.qiuhuanhen.SwaggerTool" class="com.qiuhuanhen.SwaggerTool" text="Swagger Annotation"
+            description="Generate swagger annotation">
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
+    </action>
+    <action id="com.qiuhuanhen.EasyExcelTool" class="com.qiuhuanhen.EasyExcelTool" text="EasyExcel Annotation"
+            description="Generate easy excel annotation">
+      <add-to-group group-id="GenerateGroup" relative-to-action="com.qiuhuanhen.SwaggerTool" anchor="after"/>
+    </action>
+  </actions>
+
+</idea-plugin>
