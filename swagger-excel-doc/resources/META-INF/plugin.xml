@@ -5,11 +5,11 @@
   <vendor>qiuhuanhen</vendor>
 
   <description><![CDATA[
-      Generate aswgger and easy excel Annotation plugin.<br>
-      根据属性的doc注释生成swagger/easy注解,运用场景为vo类、excel的导入导出类<br>
-
+      Generate swagger and easy excel Annotation plugin.<br>
       <ul>
-        <li>generate swagger or easy excel annotation by doc comment.</li>
+        <li>generate swagger or easy excel annotation by doc comment</li>
+        <li>such as field in resultVo class,could generate ApiModel and ApiModelProperty annotation auto</li>
+        <li>usage: alt ins  , selected Swagger Annotation menu or EasyExcel Annotation menu</li>
       </ul>
 
     ]]></description>
